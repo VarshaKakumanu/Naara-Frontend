@@ -1,4 +1,7 @@
 import React, { Component, useState } from "react";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -35,6 +38,9 @@ export default function Login() {
   }
 
   return (
+    <Container className="p-4" fluid="md" >
+      <Row>
+        <Col>
     <div className="auth-wrapper">
       <div className="auth-inner">
         <form onSubmit={handleSubmit}>
@@ -84,5 +90,8 @@ export default function Login() {
         </form>
       </div>
     </div>
+    </Col>
+    </Row>
+    </Container>
   );
 }
